@@ -7,11 +7,21 @@
     */
 
     //ENTRADA
-
+    const palavra = prompt("Informe uma palavra");
 
     //PROCESSAMENTO
-
+    function vogais(texto){
+        let vogal = 0;
+        for (let item of texto){
+            const c = item.toLowerCase();
+            if (c === "a" || c === "e" || c === "i" || c === "o" || c === "u"){
+                vogal++;
+            }
+        }
+        return vogal;
+    }
 
     //SAÍDA
-
+    const qtd = vogais(palavra || "");
+    alert(`A palavra ${palavra} tem ${qtd} vogais.`);
 </script>

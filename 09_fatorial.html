@@ -1,15 +1,27 @@
 <script>
-    /*
+  /*
     PROBLEMA: CALCULAR FATORIAL
     Peça para o usuário informar um número inteiro. Calcule o fatorial do número informado pelo usuário, usando função JavaScript e retorne o resultado para o usuário.
     */
 
-    //ENTRADA
+  //ENTRADA
+  const numero = Number(prompt("Informe um numero inteiro."));
 
+  //PROCESSAMENTO
+  function fatorial(n) {
+    if (n < 0) {
+      return alert("Não insira numeros negativos!");
+    }
+    if (n === 0 || n === 1) {
+      return 1;
+    }
+    let resultado = 1;
+    for (let i = 2; i <= n; i++) {
+      resultado *= i;
+    }
+    return resultado;
+  }
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+  //SAÍDA
+  document.write(`O fatorial de ${numero} é: ${fatorial(numero)}`);
 </script>

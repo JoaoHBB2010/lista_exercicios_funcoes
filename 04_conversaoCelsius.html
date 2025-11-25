@@ -5,12 +5,14 @@
     C = (F - 32) * 5 / 9
     */
 
-    //ENTRADA
+  //ENTRADA
+  const fahrenheit = Number(prompt("Informe a temperatura em Fahrenheit."));
 
+  //PROCESSAMENTO
+  function celsius(f) {
+    return (c = (f - 32) * 5/9);
+  }
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+  //SAÍDA
+  alert(`A temperatura em Celsius é ${celsius(fahrenheit)}`);
 </script>

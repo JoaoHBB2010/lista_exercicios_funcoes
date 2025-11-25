@@ -6,11 +6,15 @@
     */
 
     //ENTRADA
-
+    const peso = Number(prompt("Quanto vc pesa?Em kg"));
+    const altura = Number(prompt("Qual sua altura?Em metros"));
 
     //PROCESSAMENTO
-
+    function imc(p,a){
+       return imc = peso / (altura * altura);
+    }
 
     //SAÍDA
+    alert(`Seu IMC é ${imc(peso,altura).toFixed(2)}`);
 
 </script>

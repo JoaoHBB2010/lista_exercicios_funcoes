@@ -6,11 +6,22 @@
     */
 
     //ENTRADA
-
+    const palavra = prompt("Informe uma palavra ou frase");
+    const letraProcurar = prompt("Informe uma letra para procurar").toLowerCase().trim();
 
     //PROCESSAMENTO
-
+    function aparece(frase){
+        let letra = 0;
+        for (let item of frase){
+            const c = item.toLowerCase();
+            if (c === letraProcurar){
+                letra++;
+            }
+        }
+        return letra;
+    }
 
     //SAÍDA
+    alert(`A letra ${letraProcurar} aparece: ${aparece(palavra)} vezes`);
 
 </script>
